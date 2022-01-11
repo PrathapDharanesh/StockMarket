@@ -1,0 +1,22 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8762/eureka/
+  instance:
+    hostname: localhost
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: StockDB
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: Stock-Application
+
+server:
+  port: 9001
