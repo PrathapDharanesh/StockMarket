@@ -1,9 +1,11 @@
 package com.stock.controller;
 
+
 import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,11 +35,12 @@ public class StockController {
 	}
 
 	@GetMapping(value = "/stock/get/")
-	public List<Stock> getStockDateDetails(@RequestParam String companyID, @RequestParam Date startDate,
-			@RequestParam Date endDate) {
-		if (startDate.compareTo(endDate) == 0 || startDate.compareTo(endDate) > 0) {
+	public List<Stock> getStockDateDetails(@RequestParam String companyID, 
+			@RequestParam Date startDate, Date endDate) {
+		//if (startDate.compareTo(endDate) == 0 || startDate.compareTo(endDate) > 0) {
 			
-		}
+		//}
+		//System.out.println(companyID + ""+startDate+""+endDate);
 		return stockService.stockDetailsByDate(startDate, endDate, companyID);
 	}
 }

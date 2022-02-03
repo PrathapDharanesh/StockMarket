@@ -9,7 +9,8 @@ import com.stock.pojo.Stock;
 
 @Repository
 public interface StockRepository extends MongoRepository<Stock, Long>{
-
+	
+	
 	 public List<Stock> findByCompanyCode(String companyCode);
 	 
 }

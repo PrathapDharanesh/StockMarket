@@ -1,7 +1,9 @@
 package com.stock.pojo;
 
 
-import java.util.Date;
+
+import java.sql.Date;
+import java.time.LocalDate;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
@@ -18,14 +20,14 @@ public class Stock {
 	private long stockId;
 	private Double stockPrice;
 	private String companyCode;
-	private Date stockDate;
+	private LocalDate stockDate;
 	
 	public Stock() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Stock(long stockId, Double stockPrice, String companyCode, Date stockDate) {
+	public Stock(long stockId, Double stockPrice, String companyCode, LocalDate stockDate) {
 		super();
 		this.stockId = stockId;
 		this.stockPrice = stockPrice;
@@ -57,11 +59,11 @@ public class Stock {
 		this.companyCode = companyCode;
 	}
 
-	public Date getStockDate() {
+	public LocalDate getStockDate() {
 		return stockDate;
 	}
 
-	public void setStockDate(Date stockDate) {
+	public void setStockDate(LocalDate stockDate) {
 		this.stockDate = stockDate;
 	}
 
